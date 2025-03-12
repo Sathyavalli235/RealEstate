@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makaan - Real Estate</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #eafaf1;
+            overflow-x: hidden;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00a76f;
+            display: flex;
+            align-items: center;
+        }
+        .navbar-brand img {
+            width: 40px;
+            margin-right: 10px;
+        }
+        .hero-section {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            padding: 50px 0;
+        }
+        .hero-text {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: left;
+        }
+        .hero-text span {
+            color: #00a76f;
+        }
+        .hero-img img {
+            width: 100%;
+            border-radius: 10px;
+            max-height: 400px;
+            object-fit: cover;
+        }
+        .search-bar {
+            background: #00a76f;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .property-section {
+    text-align: center; /* Centers all text inside this section */
+}
+
+        
+        .property-card {
+    background-color: white; /* Default white */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    border: 2px solid #006644; /* Dark green border for all cards */
+}
+
+.property-card:hover {
+    background-color: #00a76f; /* Green on hover */
+    color: white;
+}
+
+.property-card img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+.hero-section {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 50px 0;
+}
+
+.hero-text {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.hero-text span {
+    color: #00a76f;
+}
+
+.hero-img img {
+    width: 100%;
+    border-radius: 10px;
+    max-height: 400px;
+    object-fit: cover;
+}
+.list-unstyled {
+                text-align: left;
+                display: inline-block;
+                margin: 0 auto;
+            }
+            .btn-success {
+                margin-top: 10px;
+            }
+            .hero-section {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            padding: 50px 0;
+            position: relative;
+        }
+        .hero-text {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: left;
+        }
+        .hero-text span {
+            color: #00a76f;
+        }
+        @media (max-width: 768px) {
+    p {
+        text-align: justify;
+    }
+}
+
+/* Green Border for Cards */
+.property-card {
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+
+.property-card {
+    width: 100%;
+    max-width: 350px; /* Adjust as per your layout */
+    overflow: hidden;
+}
+
+
+
+
+.property-image {
+    width: 100%; /* Make image full width */
+    height: 200px; /* Adjust height as needed */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    display: block;
+    border-radius: 8px 8px 0 0; /* Optional: Add rounded corners to match card */
+}
+
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-body h6 {
+    font-size: 18px;
+}
+
+.card-body p {
+    margin-bottom: 10px;
+}
+
+.badge {
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.filter-buttons {
+    margin-bottom: 20px;
+}
+
+.filter-buttons .btn {
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .property-card {
+        margin: 0 auto; /* Centers the card */
+        display: block;
+        text-align: center;
+    }
+
+
+}
+.contact-agent {
+    background-color: #f7fcf8;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+    gap: 30px;
+}
+
+.contact-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.contact-content {
+    flex: 1;
+}
+
+.contact-content h2 {
+    font-size: 28px;
+    color: #0d2c52;
+    font-weight: bold;
+}
+
+.contact-content p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.call-button, .appointment-button {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.call-button {
+    background-color: #17c98e;
+}
+
+.appointment-button {
+    background-color: #0d2c52;
+}
+
+/* 📌 Responsive for Mobile */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-buttons {
+        justify-content: center;
+    }
+}
+.property-agents {
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.property-agents h2 {
+    font-size: 28px;
+    color: #0d2c52;
+    font-weight: bold;
+}
+
+.property-agents p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.agents-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.agent-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.agent-card img {
+    width: 100%;
+    height: auto;
+}
+
+.agent-info {
+    padding: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    background: #fff;
+    color: #0d2c52;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    background: #0d2c52;
+    color: #fff;
+}
+
+.agent-info {
+    padding: 15px;
+    text-align: center; /* Ensures all text is centered */
+}
+
+.agent-info h3 {
+    font-size: 18px;
+    color: #0d2c52;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.agent-info p {
+    color: #666;
+    font-size: 14px;
+    margin: 0 auto; /* Centers text */
+    display: block; /* Ensures it follows block behavior */
+    text-align: center; /* Explicitly centers text */
+}
+
+
+/* 📌 Responsive for Mobile */
+@media (max-width: 768px) {
+    .agents-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.testimonial-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.testimonial {
+    display: flex;
+    align-items: center;
+    background: #f8fff5;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px dashed #d4e5d4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.testimonial-text {
+    flex: 1;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .testimonial {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .testimonial img {
+        margin-bottom: 10px;
+    }
+}
+.footer {
+    background: #0b3556;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-col {
+    width: 22%;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.footer-col p,
+.footer-col ul li a {
+    font-size: 14px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a:hover {
+    color: #fff;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 18px;
+    color: #ccc;
+}
+
+.social-links a:hover {
+    color: #fff;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.gallery img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.newsletter {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.newsletter input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter button {
+    background: #00d084;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.newsletter button:hover {
+    background: #009b60;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    background: #08283c;
+}
+
+.footer-bottom p,
+.footer-bottom ul {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-bottom ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.footer-bottom ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-bottom ul li a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .gallery {
+        justify-content: center;
+    }
+
+    .newsletter {
+        flex-direction: column;
+    }
+
+    .newsletter input {
+        text-align: center;
+    }
+
+    .footer-bottom ul {
+        flex-direction: column;
+    }
+}
+
+
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+            .hero-text {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="./Images/icon-deal.png" alt="Logo"> Makaan
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="propertyDropdown" role="button" data-bs-toggle="dropdown">Property</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Property List</a></li>
+                            <li><a class="dropdown-item" href="#">Property Type</a></li>
+                            <li><a class="dropdown-item" href="#">Property Agent</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-bs-toggle="dropdown">Pages</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Testimonial</a></li>
+                            <li><a class="dropdown-item" href="#">404 Error</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <a href="#" class="btn btn-success ms-3">Add Property</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container hero-section mt-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="hero-text">Find A <span>Perfect Home</span> To Live With Your Family</h1>
+                <p>Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p>
+                <button class="btn btn-success">Get Started</button>
+            </div>
+            <div class="col-md-6 hero-img">
+                <img src="./Images/carousel-1.jpg" alt="Luxury House">
+                <img src="./Images/carousel-2.jpg" alt="Luxury House">
+
+            </div>
+        </div>
+    </section>
+    <section class="container search-bar text-white">
+        <div class="row g-3">
+            <div class="col-md-3">
+                <input type="text" class="form-control" placeholder="Search Keyword">
+            </div>
+            <div class="col-md-3">
+                <select class="form-select">
+                    <option>Property Type </option>
+                    <option>Property Type 1</option>
+                    <option>Property Type 2</option>
+                    <option>Property Type 3</option>
+
+
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="form-select">
+                    <option>Location</option>
+                    <option>Location 1</option>
+                    <option>Location 2</option>
+                    <option>Location 3</option>
+
+
+                </select>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-dark w-100">Search</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container property-section">
+        <h2>Property Types</h2>
+        <p>Eirmod sed ipsum dolor sit rebum labore magna erat.</p>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div class="property-card">
+                    <img src="./Images/icon-apartment.png" alt="Apartment">
+                    <h4>Apartment</h4>
+                    <p>123 Properties</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div class="property-card">
+                    <img src="./Images/icon-villa.png" alt="Villa">
+                    <h4>Villa</h4>
+                    <p>123 Properties</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div class="property-card">
+                    <img src="./Images/icon-house.png" alt="Home">
+                    <h4>Home</h4>
+                    <p>123 Properties</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div class="property-card">
+                    <img src="./Images/icon-housing.png" alt="Office">
+                    <h4>Office</h4>
+                    <p>123 Properties</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div class="property-card">
+                    <img src="./Images/icon-building.png" alt="Office">
+                    <h4>Building</h4>
+                    <p>123 Properties</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div class="property-card">
+                    <img src="./Images/icon-neighborhood.png" alt="Office">
+                    <h4>Townhous</h4>
+                    <p>123 Properties</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div class="property-card">
+                    <img src="./Images/icon-condominium.png" alt="Office">
+                    <h4>Shop</h4>
+                    <p>123 Properties</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-3">
+                <div class="property-card">
+                    <img src="./Images/icon-luxury.png" alt="Office">
+                    <h4>Garage</h4>
+                    <p>123 Properties</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container hero-section mt-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 hero-img">
+                <div class="green-design"></div>
+                <img src="./Images/about.jpg" alt="Luxury House">
+            </div>
+            <div class="col-md-6">
+                <h1 class="hero-text">#1 Place To Find The Perfect <span>Property</span></h1>
+                <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                
+                <ul class="list-unstyled">
+                    <li>✅ Tempor erat elitr rebum at clita</li>
+                    <li>✅ Aliqu diam amet diam et eos</li>
+                    <li>✅ Clita duo justo magna dolore erat amet</li>
+                </ul>
+    <br>
+                <button class="btn btn-success">Read More</button>
+            </div>
+        </div>
+    </section>
+    <div class="container mt-4">
+        <h2 class="fw-bold">Property Listings</h2>
+        <p class="text-muted">Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd <br> vero ipsum sit eirmod sit diam justo sed rebum.</p>
+        <div class="filter-buttons">
+            <button class="btn btn-success">Featured</button>
+            <button class="btn btn-outline-success mx-2">For Sell</button>
+            <button class="btn btn-outline-success">For Rent</button>
+        </div>
+        <div class="row">
+            <!-- Property 1 -->
+            <div class="col-md-4">
+                <div class="card property-card">
+                    <img src="./Images/property-1.jpg" class="w-100 property-image" alt="Property">
+                    <div class="card-body">
+                        <span class="badge bg-success position-absolute top-0 start-0 m-2">For Sell</span>
+                        <h5 class="text-success">$12,345</h5>
+                        <h6 class="fw-bold">Golden Urban House</h6>
+                        <p class="text-muted">123 Street, New York, USA</p>
+                        <div class="d-flex justify-content-between text-muted">
+                            <span>📏 1000 Sqft</span>
+                            <span>🛏️ 3 Bed</span>
+                            <span>🛁 2 Bath</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Property 2 -->
+            <div class="col-md-4">
+                <div class="card property-card">
+                    <img src="./Images/property-2.jpg" class="w-100 property-image" alt="Property">
+                    <div class="card-body">
+                        <span class="badge bg-success position-absolute top-0 start-0 m-2">For Rent</span>
+                        <h5 class="text-success">$10,000</h5>
+                        <h6 class="fw-bold">Luxury Villa</h6>
+                        <p class="text-muted">456 Avenue, Los Angeles, USA</p>
+                        <div class="d-flex justify-content-between text-muted">
+                            <span>📏 1500 Sqft</span>
+                            <span>🛏️ 4 Bed</span>
+                            <span>🛁 3 Bath</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Property 3 -->
+            <div class="col-md-4">
+                <div class="card property-card">
+                    <img src="./Images/property-3.jpg" class="w-100 property-image" alt="Property">
+                    <div class="card-body">
+                        <span class="badge bg-success position-absolute top-0 start-0 m-2">For Sell</span>
+                        <h5 class="text-success">$8,500</h5>
+                        <h6 class="fw-bold">Modern Office Space</h6>
+                        <p class="text-muted">789 Business Road, Chicago, USA</p>
+                        <div class="d-flex justify-content-between text-muted">
+                            <span>📏 2000 Sqft</span>
+                            <span>🏢 5 Rooms</span>
+                            <span>🛁 2 Bath</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card property-card">
+                    <img src="./Images/property-4.jpg" class="w-100 property-image" alt="Property">
+                    <div class="card-body">
+                        <span class="badge bg-success position-absolute top-0 start-0 m-2">For Sell</span>
+                        <h5 class="text-success">$8,500</h5>
+                        <h6 class="fw-bold">Modern Office Space</h6>
+                        <p class="text-muted">789 Business Road, Chicago, USA</p>
+                        <div class="d-flex justify-content-between text-muted">
+                            <span>📏 2000 Sqft</span>
+                            <span>🏢 5 Rooms</span>
+                            <span>🛁 2 Bath</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card property-card">
+                    <img src="./Images/property-5.jpg" class="w-100 property-image" alt="Property">
+                    <div class="card-body">
+                        <span class="badge bg-success position-absolute top-0 start-0 m-2">For Sell</span>
+                        <h5 class="text-success">$8,500</h5>
+                        <h6 class="fw-bold">Modern Office Space</h6>
+                        <p class="text-muted">789 Business Road, Chicago, USA</p>
+                        <div class="d-flex justify-content-between text-muted">
+                            <span>📏 2000 Sqft</span>
+                            <span>🏢 5 Rooms</span>
+                            <span>🛁 2 Bath</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card property-card">
+                    <img src="./Images/property-6.jpg" class="w-100 property-image" alt="Property">
+                    <div class="card-body">
+                        <span class="badge bg-success position-absolute top-0 start-0 m-2">For Sell</span>
+                        <h5 class="text-success">$8,500</h5>
+                        <h6 class="fw-bold">Modern Office Space</h6>
+                        <p class="text-muted">789 Business Road, Chicago, USA</p>
+                        <div class="d-flex justify-content-between text-muted">
+                            <span>📏 2000 Sqft</span>
+                            <span>🏢 5 Rooms</span>
+                            <span>🛁 2 Bath</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn btn-success ms-3">Browse More Property</a>
+
+        </div>
+    </div>
+    <div class="contact-agent">
+        <div class="contact-container">
+            <div class="contact-image">
+                <img src="./Images/call-to-action.jpg" alt="Certified Agent">
+            </div>
+            <div class="contact-content">
+                <h2>Contact With Our Certified Agent</h2>
+                <p>Eirmod sed ipsum dolor sit rebum magna erat. Tempor lorem kasd vero ipsum sit sit diam justo sed vero dolor duo.</p>
+                <div class="contact-buttons">
+                    <a href="#" class="call-button">
+                        📞 Make A Call
+                    </a>
+                    <a href="#" class="appointment-button">
+                        📅 Get Appointment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="property-agents">
+        <h2>Property Agents</h2>
+        <p>
+            Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.
+        </p>
+    
+        <div class="agents-container">
+            <div class="agent-card">
+                <img src="./Images/team-1.jpg" alt="Agent 1">
+                <div class="agent-info">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <h3>Full Name</h3>
+                    <p>Designation</p>
+                </div>
+            </div>
+    
+            <div class="agent-card">
+                <img src="./Images/team-2.jpg" alt="Agent 2">
+                <div class="agent-info">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <h3>Full Name</h3>
+                    <p>Designation</p>
+                </div>
+            </div>
+    
+            <div class="agent-card">
+                <img src="./Images/team-3.jpg" alt="Agent 3">
+                <div class="agent-info">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <h3>Full Name</h3>
+                    <p>Designation</p>
+                </div>
+            </div>
+    
+            <div class="agent-card">
+                <img src="./Images/team-4.jpg" alt="Agent 4">
+                <div class="agent-info">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <h3>Full Name</h3>
+                    <p>Designation</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonials Section -->
+<div class="container mt-5">
+    <h2 class="text-center fw-bold">Our Clients Say!</h2>
+    <p class="text-center">Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+
+    <div class="testimonial-box">
+        <div class="testimonial">
+            <img src="./Images/testimonial-1.jpg" alt="Client">
+            <div>
+                <strong>Client Name</strong>
+                <p>Profession</p>
+            </div>
+            <p class="testimonial-text">
+                Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos.
+            </p>
+        </div>
+
+        <div class="testimonial">
+            <img src="./Images/testimonial-2.jpg" alt="Client">
+            <div>
+                <strong>Client Name</strong>
+                <p>Profession</p>
+            </div>
+            <p class="testimonial-text">
+                Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos.
+            </p>
+        </div>
+
+        <div class="testimonial">
+            <img src="./Images/testimonial-3.jpg" alt="Client">
+            <div>
+                <strong>Client Name</strong>
+                <p>Profession</p>
+            </div>
+            <p class="testimonial-text">
+                Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos.
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <!-- Get In Touch -->
+            <div class="footer-col">
+                <h4>Get In Touch</h4>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Street, New York, USA</p>
+                <p><i class="fas fa-phone"></i> +012 345 67890</p>
+                <p><i class="fas fa-envelope"></i> info@example.com</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Photo Gallery -->
+            <div class="footer-col">
+                <h4>Photo Gallery</h4>
+                <div class="gallery">
+                    <img src="./Images/property-1.jpg" alt="Gallery Image">
+                    <img src="./Images/property-2.jpg" alt="Gallery Image">
+                    <img src="./Images/property-3.jpg" alt="Gallery Image">
+                    <img src="./Images/property-4.jpg" alt="Gallery Image">
+                    <img src="./Images/property-5.jpg" alt="Gallery Image">
+                    <img src="./Images/property-6.jpg" alt="Gallery Image">
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                <div class="newsletter">
+                    <input type="email" placeholder="Your email">
+                    <button>SignUp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="footer-bottom">
+        <p>©  All Rights Reserved. </p>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Cookies</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">FAQs</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>
