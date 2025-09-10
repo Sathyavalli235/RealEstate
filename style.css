@@ -115,7 +115,6 @@
     }
 }
 
-/* Green Border for Cards */
 .property-card {
     background-color: white;
     text-align: center;
@@ -131,9 +130,6 @@
     max-width: 350px; /* Adjust as per your layout */
     overflow: hidden;
 }
-
-
-
 
 .property-image {
     width: 100%; /* Make image full width */
@@ -245,7 +241,6 @@
     background-color: #0d2c52;
 }
 
-/* 📌 Responsive for Mobile */
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
@@ -381,7 +376,6 @@
     color: #555;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .testimonial {
         flex-direction: column;
@@ -513,7 +507,6 @@
     color: #fff;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .footer .container {
         flex-direction: column;
@@ -551,4 +544,5 @@
                 text-align: center;
             }
         }
+
 
